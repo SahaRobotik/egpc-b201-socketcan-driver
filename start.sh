@@ -1,6 +1,6 @@
 ### parameter
-socket_name_1=emuccan0
-socket_name_2=emuccan1
+socket_name_1=can0
+socket_name_2=can1
 dev_name=ttyACM0
 baudrate=7 # 4: 100 KBPS, 5: 125 KBPS,  6: 250 KBPS, 7: 500 KBPS,
            # 8: 800 KBPS, 9: 1 MBPS,   10: 400 KBPS

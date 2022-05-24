@@ -10,10 +10,10 @@ error_type=0 # 0: EMUC_DIS_ALL, 1: EMUC_EE_ERR, 2: EMUC_BUS_ERR, 3: EMUC_EN_ALL
 sudo pkill -2 emucd_64
 sleep 0.2
 sudo rmmod emuc2socketcan
-# sudo insmod emuc2socketcan.ko
-sudo cp emuc2socketcan.ko /lib/modules/$(uname -r)/kernel/drivers/net/can
-sudo depmod -a
-sudo modprobe emuc2socketcan
+sudo insmod emuc2socketcan.ko
+# sudo cp emuc2socketcan.ko /lib/modules/$(uname -r)/kernel/drivers/net/can
+# sudo depmod -a
+# sudo modprobe emuc2socketcan
 sudo ./emucd_64 -s${baudrate} -e${error_type} ${dev_name} ${socket_name_1} ${socket_name_2}
 
 if command -v ifconfig &> /dev/null

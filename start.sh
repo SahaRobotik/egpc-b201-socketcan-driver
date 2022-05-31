@@ -3,7 +3,7 @@
 ip a | grep can0
 if [ $? -eq 0 ]; then
     echo -e "can0 present."
-    break
+    exit
 else
     cd ~/egpc-b201-socketcan-driver
     make clean
